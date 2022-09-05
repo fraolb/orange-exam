@@ -110,7 +110,7 @@ function AdminPage() {
       <article>
         
                 <table class="center">
-                    <tr>
+                    <tr className='item'>
                         <th>Email</th>
                         <th>Firstname</th>
                         <th>Lastname</th>
@@ -121,7 +121,7 @@ function AdminPage() {
                     {employee.map((person) => {
           const { id, firstName,lastName,gender, email, dateOfBirth,phoneNumber } = person;
           return (
-                    <tr key={id}>
+                    <tr key={id} className='item'>
                         <th>{email}</th>
                         <th>{firstName}</th>
                         <th>{lastName}</th>
