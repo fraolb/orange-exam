@@ -1,5 +1,7 @@
 import React, { useState } from 'react'
 
+import './AdminPage.css'
+
 function AdminPage() {
   const [user, setUser] = useState({ email:'', firstName: '',lastName: '',gender:'', dateOfBirth:'',phoneNumber:'',address:''});//to add to the form where the admin adds employees
   const [employee, setEmployee] = useState([]);//the data of the whole employees added
@@ -31,6 +33,7 @@ function AdminPage() {
     <div>
          <article className='form'>
         <form>
+        <h3>Add Employee</h3>
         <div className='form-control'>
             <label htmlFor='email'>Email : </label>
             <input
@@ -109,7 +112,7 @@ function AdminPage() {
       </article>
       <article>
         
-                <table class="center">
+                <table className="center">
                     <tr className='form'>
                         <th>Email</th>
                         <th>Firstname</th>
