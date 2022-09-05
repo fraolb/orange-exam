@@ -21,6 +21,12 @@ function AdminPage() {
     }
   };
 
+  //to remove the employee
+  const removeEmployee= (id) => {
+    let newUsers = employee.filter((person) => person.id !== id);
+    setEmployee(newUsers);
+  };
+
   return (
     <div>
          <article className='form'>
@@ -122,6 +128,7 @@ function AdminPage() {
                         <th>{gender}</th>
                         <th>{dateOfBirth}</th>
                         <th>{phoneNumber}</th>
+                        <th><button onClick={() => removeEmployee(id)}>remove</button></th>
                     </tr>
                       );
                     })}
@@ -136,8 +143,3 @@ function AdminPage() {
 
 export default AdminPage
 
-{/* <h4>{firstName} {lastName}</h4>
-              <p>{email}</p>
-              <p>{dateOfBirth}</p>
-              <p>{phoneNumber}</p>
-              <p>{gender}</p> */}
