@@ -39,7 +39,7 @@ const AdminLogin = () => {
               onChange={(e) => setPassword(e.target.value)}
             />
             </div>
-          <button type='submit'>Login</button>
+          <button type='submit' className='btn'>Login</button>
         </form>
         {
            bool== true ? <AdminPage /> : "Add ur password"
