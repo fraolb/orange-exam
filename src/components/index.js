@@ -1,28 +1,25 @@
 import React from "react";
 // react router
-import { BrowserRouter as Router, Route,Routes} from "react-router-dom";
+import { BrowserRouter, Router, Route, Routes } from "react-router-dom";
 
 //pages
-import Home from './Home'
+import Home from "./Home";
 import Navbar from "./Navbar";
-import AdminPage from "./admin/AdminPage";
+import AdminLogin from "./admin/AdminLogin";
 import UserPage from "./user/UserPage";
 
 const index = () => {
   return (
-
-      <Router>
+    <BrowserRouter>
+      <React.Fragment>
         <Navbar />
         <Routes>
-          <Route exact path="/" component={Home} />
-           
-          <Route path="/UserPage" component={AdminPage} />
-            
-          <Route path="/AdminPage" component={UserPage} />
-            
+          <Route index path="/" element={<Home />} />
+          <Route path="/AdminLogin" element={<AdminLogin />} />
+          <Route path="/UserPage" element={<UserPage />} />
         </Routes>
-      </Router>
-
+      </React.Fragment>
+    </BrowserRouter>
   );
 };
 
