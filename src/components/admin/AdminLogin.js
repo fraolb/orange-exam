@@ -17,8 +17,9 @@ const AdminLogin = () => {
 
   return (
     <div>
-        <h1>Please Enter your Password</h1>
+        <h2>Please Enter your Password</h2>
         <form className='form' onSubmit={handleSubmit}>
+     
           <div className='form-control'>
             <label htmlFor='firstName'>Name : </label>
             <input
